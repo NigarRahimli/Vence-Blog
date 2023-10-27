@@ -1,5 +1,5 @@
 "use client";
-
+import "../app/globals.css"
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
   const getData = async () => {
     await fetch("http://localhost:5000/articles")
       .then((x) => x.json())
-      .then((c) => setData(c));
+    .then((c) => setData(c));
   };
 
   useEffect(() => {
